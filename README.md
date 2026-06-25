@@ -64,5 +64,7 @@ java -cp bin DomusControl
 Developed as part of an academic project.
 
 Bruno Coelho
+
 José Gomes
+
 Vasco Machado

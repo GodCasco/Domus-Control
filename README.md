@@ -1,4 +1,4 @@
-# DomusControl 🏠
+# DomusControl
 
 Sistema desenvolvido em Java para gestão inteligente de dispositivos numa casa. Permite controlar divisões, dispositivos, automações, escalonamentos e cenários, com suporte a múltiplos utilizadores com diferentes níveis de permissão.
 

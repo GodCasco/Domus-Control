@@ -63,8 +63,6 @@ java -cp bin DomusControl
 ## Authors
 Developed as part of an academic project.
 
-| Name          |
-|---------------|
 | Bruno Coelho  |
 | José Gomes    |
 | Vasco Machado |

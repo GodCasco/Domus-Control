@@ -1,76 +1,70 @@
 # DomusControl
-
-Sistema desenvolvido em Java para gestão inteligente de dispositivos numa casa. Permite controlar divisões, dispositivos, automações, escalonamentos e cenários, com suporte a múltiplos utilizadores com diferentes níveis de permissão.
-
----
-
-## Funcionalidades
-
-- Gestão de **casas** e **divisões**
-- Controlo de **dispositivos** (lâmpadas, tomadas, cortinas, colunas, portões de garagem)
-- Sistema de **automações** e **escalonamentos** baseados em condições e horários
-- Criação e execução de **cenários** personalizados
-- **Regras** automáticas entre dispositivos (ex: se sensor X → ligar dispositivo Y)
-- Gestão de **utilizadores** com níveis de acesso (`USER` / `ADMIN`) por casa
-- **Histórico** de ações por dispositivo e utilizador
-- Persistência de dados via **serialização Java**
+Java-based smart home management system. Allows controlling rooms, devices, automations, schedules and scenarios, with support for multiple users with different permission levels.
 
 ---
 
-## Estrutura do Projeto
+## Features
+- Management of **homes** and **rooms**
+- Control of **devices** (lights, outlets, blinds, speakers, garage doors)
+- **Automation** and **scheduling** system based on conditions and time
+- Creation and execution of custom **scenarios**
+- Automatic **rules** between devices (e.g. if sensor X → turn on device Y)
+- **User** management with access levels (`USER` / `ADMIN`) per home
+- **History** of actions per device and user
+- Data persistence via **Java serialization**
 
+---
+
+## Project Structure
 ```
 DomusControl/
+
 ├── src/
-│   ├── DomusControl.java      # Ponto de entrada (main)
-│   ├── Sistema.java           # Lógica central do sistema
-│   ├── Menu.java              # Interface de utilizador (CLI)
+│   ├── DomusControl.java      # Entry point (main)
+│   ├── Sistema.java           # Core system logic
+│   ├── Menu.java              # User interface (CLI)
 │   │
-│   ├── Casa.java              # Representa uma casa
-│   ├── Divisao.java           # Divisão dentro de uma casa
+│   ├── Casa.java              # Represents a home
+│   ├── Divisao.java           # Room within a home
 │   │
-│   ├── Dispositivo.java       # Classe abstrata base dos dispositivos
-│   ├── Lampada.java           # Dispositivo: lâmpada (intensidade, temperatura de cor)
-│   ├── Tomada.java            # Dispositivo: tomada
-│   ├── Cortina.java           # Dispositivo: cortina (grau de abertura)
-│   ├── Coluna.java            # Dispositivo: coluna de som (volume)
-│   ├── PortaoGaragem.java     # Dispositivo: portão de garagem (abertura)
+│   ├── Dispositivo.java       # Abstract base class for devices
+│   ├── Lampada.java           # Device: light bulb (intensity, color temperature)
+│   ├── Tomada.java            # Device: power outlet
+│   ├── Cortina.java           # Device: blind (opening degree)
+│   ├── Coluna.java            # Device: speaker (volume)
+│   ├── PortaoGaragem.java     # Device: garage door (opening degree)
 │   │
-│   ├── Utilizador.java        # Utilizador do sistema
+│   ├── Utilizador.java        # System user
 │   ├── AdminLevel.java        # Enum: USER / ADMIN
 │   │
-│   ├── Automacao.java         # Automação baseada em condições
-│   ├── Escalonamento.java     # Automação com horário (estende Automacao)
-│   ├── Cenario.java           # Conjunto de ações agrupadas
-│   ├── Regra.java             # Regra de ligação entre dispositivos
-│   └── Historico.java         # Registo de ações
-└── bin/                       # Ficheiros compilados (.class)
+│   ├── Automacao.java         # Condition-based automation
+│   ├── Escalonamento.java     # Time-based automation (extends Automacao)
+│   ├── Cenario.java           # Grouped set of actions
+│   ├── Regra.java             # Rule linking devices together
+│   └── Historico.java         # Action log
+└── bin/                       # Compiled files (.class)
 ```
-
 ---
 
-## Compilar e Executar
+## Build & Run
 
-### Compilar
-
+### Compile
 ```bash
 javac -d bin src/*.java
 ```
 
-### Executar
-
+### Run
 ```bash
 java -cp bin DomusControl
 ```
 
 ---
 
-## Autores
+## Authors
+Developed as part of an academic project.
 
-Trabalho desenvolvido no âmbito de projeto académico.
-
-| Número | Nome |
-|--------|------|
-| a110375 | Bruno Coelho |
-| a110367 | José Gomes |
+| Number  | Name          |
+|---------|---------------|
+| a110375 | Bruno Coelho  |
+| a110367 | José Gomes    |
 | a109949 | Vasco Machado |
